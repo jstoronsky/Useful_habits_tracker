@@ -4,7 +4,7 @@ stages:
 Deploy to stage:
   stage: deploy
   script:
-    - echo "Разворачиваем приложение"
+    - echo "Разворачиваем приложение!!"
   only:
       - main
   tags:
