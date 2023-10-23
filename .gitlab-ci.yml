@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+Deploy to stage:
+  stage: deploy
+  script:
+    - echo "Разворачиваем приложение"
+  only:
+      - main
+  tags:
+      - dev
