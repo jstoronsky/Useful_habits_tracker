@@ -4,7 +4,9 @@ stages:
 Deploy to stage:
   stage: deploy
   script:
-    - echo "Разворачиваем приложение!"
+    - cp $ENV_DEV .env
+    - echo "Разворачиваем приложение"
+    - bash deploy.sh
   only:
       - main
   tags:
