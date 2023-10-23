@@ -8,4 +8,4 @@ Deploy to stage:
   only:
       - main
   tags:
-      - dev
+      - course_work
