@@ -25,6 +25,7 @@ services:
       - /bin/sh
       - -c
       - |
+        python3 manage.py collectstatic
         python3 manage.py migrate
         python3 manage.py runserver 0.0.0.0:8000
     ports:
@@ -62,5 +63,4 @@ services:
       CELERY_BEAT_SCHEDULER: "django_celery_beat.schedulers:DatabaseScheduler"
     depends_on:
       - redis
-      - db
       - habit_service
